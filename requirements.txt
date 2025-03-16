@@ -1,0 +1,10 @@
+flask
+flask-wtf
+flask-sqlalchemy
+flask-login
+python-dotenv
+mysqlclient
+werkzeug
+blinker
+flask-mail
+itsdangerous
