@@ -1,0 +1,55 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Golden Penny Wheat Flour",
+        "nafdac_number": "01-2345",
+        "ingredients": [
+          {"name": "Wheat flour", "is_allergen": true},
+          {"name": "Vitamin B", "is_allergen": false},
+          {"name": "Iron", "is_allergen": false}
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Peak Milk Powder",
+        "nafdac_number": "01-3456",
+        "ingredients": [
+          {"name": "Milk powder", "is_allergen": true},
+          {"name": "Calcium", "is_allergen": false},
+          {"name": "Vitamin D", "is_allergen": false}
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Indomie Instant Noodles",
+        "nafdac_number": "01-4567",
+        "ingredients": [
+          {"name": "Wheat flour", "is_allergen": true},
+          {"name": "Palm oil", "is_allergen": false},
+          {"name": "Salt", "is_allergen": false},
+          {"name": "Soy sauce", "is_allergen": true}
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Dano Milk",
+        "nafdac_number": "01-5678",
+        "ingredients": [
+          {"name": "Milk powder", "is_allergen": true},
+          {"name": "Vitamin A", "is_allergen": false},
+          {"name": "Calcium", "is_allergen": false}
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Honeywell Semolina",
+        "nafdac_number": "01-6789",
+        "ingredients": [
+          {"name": "Durum wheat", "is_allergen": true},
+          {"name": "Vitamin B", "is_allergen": false}
+        ]
+      }
+    ]
+  }
+  

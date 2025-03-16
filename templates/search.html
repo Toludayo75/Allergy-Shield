@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-md-8 mx-auto">
+            <form method="POST" action="{{ url_for('search') }}" class="d-flex gap-2">
+                {{ form.hidden_tag() }}
+                {{ form.query(class="form-control form-control-lg", placeholder="Enter product name or NAFDAC number") }}
+                {{ form.submit(class="btn btn-primary btn-lg") }}
+                <div class="spinner-border loading-spinner text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% if results %}
+    <div class="row">
+        {% for result in results %}
+        <div class="col-md-6 mb-4">
+            <div class="card {% if result.is_safe %}safe-product{% else %}unsafe-product{% endif %}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ result.product.name }}</h5>
+                    <p class="card-text"><small>NAFDAC: {{ result.product.nafdac_number }}</small></p>
+                    
+                    {% if not result.is_safe %}
+                    <div class="allergen-warning">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        Warning: Contains allergens you're sensitive to
+                    </div>
+                    {% endif %}
+
+                    <h6>Ingredients:</h6>
+                    <ul class="ingredient-list">
+                        {% for ingredient in result.allergen_ingredients %}
+                        <li class="allergen-highlight">{{ ingredient }}</li>
+                        {% endfor %}
+                        {% for ingredient in result.safe_ingredients %}
+                        <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% elif form.query.data %}
+    <div class="alert alert-info">No products found matching your search.</div>
+    {% endif %}
+</div>
+{% endblock %}

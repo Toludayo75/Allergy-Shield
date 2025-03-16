@@ -1,0 +1,49 @@
+/* Custom styles on top of Bootstrap dark theme */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1606914469276-31bc4103c50c');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.allergen-warning {
+    background-color: var(--bs-danger);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+}
+
+.safe-product {
+    background-color: var(--bs-success-bg-subtle);
+    border: 1px solid var(--bs-success);
+}
+
+.unsafe-product {
+    background-color: var(--bs-danger-bg-subtle);
+    border: 1px solid var(--bs-danger);
+}
+
+.ingredient-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.allergen-highlight {
+    color: var(--bs-danger);
+    font-weight: bold;
+}
+
+.loading-spinner {
+    display: none;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bs-dark);
+    border-radius: 0.5rem;
+}
